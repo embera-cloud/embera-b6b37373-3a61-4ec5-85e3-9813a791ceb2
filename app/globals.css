@@ -1,0 +1,42 @@
+```css
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 240 10% 3.9%;
+    --foreground: 0 0% 98%;
+    /* Add other CSS variables if needed */
+  }
+
+  .dark {
+    /* Define dark theme variables if you have a light/dark mode toggle */
+  }
+}
+
+@layer base {
+  body {
+    @apply bg-background text-foreground;
+    scroll-behavior: smooth;
+  }
+}
+
+@layer components {
+  .glass-card {
+    @apply bg-white/5 backdrop-blur-lg border border-white/10 shadow-lg rounded-2xl;
+  }
+  .glass-nav {
+    @apply bg-black/30 backdrop-blur-xl border-b border-white/10;
+  }
+}
+
+.animated-aurora {
+  --aurora-size: 800px;
+  background-image: 
+    radial-gradient(var(--aurora-size) var(--aurora-size) at 20% 10%, var(--glow-purple-start), var(--glow-purple-end)),
+    radial-gradient(var(--aurora-size) var(--aurora-size) at 80% 90%, var(--glow-gold-start), var(--glow-gold-end)),
+    radial-gradient(var(--aurora-size) var(--aurora-size) at 50% 50%, rgba(0, 191, 255, 0.1), rgba(0, 191, 255, 0));
+  background-size: 200% 200%;
+}
+```
